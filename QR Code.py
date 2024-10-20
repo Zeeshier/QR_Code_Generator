@@ -8,7 +8,9 @@ from tkinter import filedialog, messagebox
 import qrcode
 from PIL import Image, ImageTk
 
+
 class QRCODE:
+    
     def __init__(self, root):
         self.root = root
         self.root.title("QR Code Generator & Scanner")
@@ -40,6 +42,7 @@ class QRCODE:
         # Initialize QR Code Variable
         self.qr_code_image = None
 
+
     def generate_qr(self):
         data = self.data_entry.get()
         if data:
@@ -62,6 +65,7 @@ class QRCODE:
         else:
             messagebox.showerror("Error", "Please enter data for QR Code")
 
+
     def save_qr(self):
         if self.qr_code_image:
             file_path = filedialog.asksaveasfilename(defaultextension=".png")
@@ -70,6 +74,7 @@ class QRCODE:
                 messagebox.showinfo("QR Code Saved", "QR Code saved successfully")
         else:
             messagebox.showerror("Error", "Generate QR Code first")
+
 
     def scan_qr(self):
         file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png *.jpg *.jpeg")])
