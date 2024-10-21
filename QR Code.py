@@ -8,9 +8,7 @@ from tkinter import filedialog, messagebox
 import qrcode
 from PIL import Image, ImageTk
 
-
 class QRCODE:
-    
     def __init__(self, root):
         self.root = root
         self.root.title("QR Code Generator & Scanner")
